@@ -17,3 +17,19 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a ,int &b ,int &c ,int &d)
+{
+    int *money[] = {&a, &b, &c, &d};
+    int random1 = rand()%4, random2 = rand()%4;
+    
+    while(random1 == random2)
+    {
+        random2 = rand()%4;
+    }
+        int temp;
+        temp =  *money[random1];
+        *money[random1] = *money[random2];
+        *money[random2] = temp;
+        
+}
